@@ -1,0 +1,76 @@
+/* 全体の設定 */
+body {
+    margin: 0;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    color: #333;
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ヘッダー上部の細い帯 */
+.header-top {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    padding: 5px 0;
+}
+
+.gov-text {
+    font-size: 11px;
+    color: #6c757d;
+}
+
+/* ヘッダーメイン */
+.header-main {
+    border-bottom: 3px solid #003366; /* 官公庁っぽい紺色 */
+    padding: 20px 0;
+}
+
+.header-main .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.site-branding a {
+    text-decoration: none;
+    color: #003366;
+}
+
+.agency-name {
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.agency-sub {
+    font-size: 14px;
+    color: #666;
+}
+
+/* ナビゲーション */
+.global-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.global-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.global-nav a:hover {
+    color: #003366;
+    text-decoration: underline;
+}
