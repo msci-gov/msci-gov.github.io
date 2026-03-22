@@ -1,9 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>特別事案調査省 - Ministry of Special Case Investigation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
 <div id="header-placeholder"></div>
 
+<main>
+    <section class="hero-banner">
+        <div class="container">
+            <div class="hero-content">
+                <h2>国家の安寧と、<br>確かな未来のために。</h2>
+                <p>特別事案調査省は、複雑化する現代の脅威から日本を守ります。</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="news-section">
+            <h3>新着情報</h3>
+            <ul class="news-list">
+                <li><span class="date">2026.03.20</span> <a href="#">「特別事案対策基本法」の改正について</a></li>
+                <li><span class="date">2026.03.15</span> <a href="#">機動捜査庁による合同訓練の実施について</a></li>
+                <li><span class="date">2026.03.01</span> <a href="#">令和8年度 採用説明会のお知らせ</a></li>
+            </ul>
+        </div>
+    </div>
+</main>
+
 <script>
-  fetch('header.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('header-placeholder').innerHTML = data;
-    });
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
 </script>
+
+</body>
+</html>
