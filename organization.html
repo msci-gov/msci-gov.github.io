@@ -4,54 +4,63 @@
     <meta charset="UTF-8">
     <title>組織案内 | 特別事案調査省 - MSCI</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* ページ専用：画像なしの硬派なレイアウト */
+        .content-container { padding-top: 100px; padding-bottom: 60px; max-width: 900px; margin: 0 auto; }
+        .section-title { color: #002040; border-bottom: 2px solid #002040; padding-bottom: 10px; margin-top: 40px; }
+        .data-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.9rem; }
+        .data-table th, .data-table td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        .data-table th { background: #f4f7f9; color: #555; width: 30%; }
+        .data-table td { background: #fff; }
+        .caption { font-size: 0.8rem; color: #777; margin-top: 5px; }
+    </style>
 </head>
 <body>
 
 <div id="header-placeholder"></div>
 
-<main>
-    <section class="hero-banner org-hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2>Structure and Authority.</h2>
-                <p>国の礎、未来の灯。</p>
-            </div>
-        </div>
+<main class="content-container">
+    <h1>組織構造・配備状況</h1>
+
+    <section>
+        <h2 class="section-title">特別事案調査省 本省</h2>
+        <table class="data-table">
+            <tr><th>情報分析局</th><td>国内外の通信・非公開データの集積、事案予測モデルの運用</td></tr>
+            <tr><th>事案策定室</th><td>検知事案への対処方針策定、MIAへの執行命令発行</td></tr>
+            <tr><th>法務執行室</th><td>特別執行権の法的担保、司法調整、事案の法的抹消処理</td></tr>
+            <tr><th>戦略開発部</th><td>対事案特殊装備の設計、高度AI「IZANAGI」の保守管理</td></tr>
+            <tr><th>総務課</th><td>予算管理、人事（特別調査官・捜査官の選別）</td></tr>
+        </table>
+        <p class="caption">※ 本省職員は全て国家公務員総合職より選抜</p>
     </section>
 
-    <div class="news-section">
-        <div class="container">
-            <h3>組織構造 / ORGANIZATION</h3>
-            
-            <div style="margin-bottom: 40px;">
-                <h4 style="color: #002040; border-left: 4px solid #002040; padding-left: 15px;">特別事案調査省 本省</h4>
-                <p style="font-size: 0.9rem; color: #666;">事案の検知・分析、及び法的処理の策定を担う中枢組織。</p>
-            </div>
-
-            <div style="background: #f8f9fa; padding: 25px; border-radius: 4px;">
-                <h4 style="color: #002040; margin-top: 0;">機動捜査庁 (MIA)</h4>
-                <p style="font-size: 0.9rem; color: #666;">全国5,000名の執行官による実働部隊。司法警察権を行使し、事案を物理的に抑制する。</p>
-                
-                <table style="width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.85rem;">
-                    <tr style="background: #eee;">
-                        <th style="padding: 10px; border: 1px solid #ddd;">管区</th>
-                        <th style="padding: 10px; border: 1px solid #ddd;">拠点</th>
-                        <th style="padding: 10px; border: 1px solid #ddd;">定員</th>
-                    </tr>
-                    <tr>
-                        <td style="padding: 10px; border: 1px solid #ddd;">東日本</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">東京(立川)</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">1,800名</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 10px; border: 1px solid #ddd;">西日本</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">大阪・広島</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">1,200名</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </div>
+    <section>
+        <h2 class="section-title">機動捜査庁 (MIA)</h2>
+        <p>特別事案調査省の外局として、全国5管区に執行部隊を配備。</p>
+        <table class="data-table">
+            <thead>
+                <tr style="background: #002040; color: white;">
+                    <th style="color: white;">管区</th>
+                    <th style="color: white;">主要拠点</th>
+                    <th style="color: white;">定員</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>東日本管区</strong></td><td>東京（立川本部）</td><td>1,800名</td></tr>
+                <tr><td><strong>西日本管区</strong></td><td>大阪・広島</td><td>1,200名</td></tr>
+                <tr><td><strong>北日本管区</strong></td><td>札幌・仙台</td><td>800名</td></tr>
+                <tr><td><strong>中日本管区</strong></td><td>名古屋</td><td>750名</td></tr>
+                <tr><td><strong>南日本管区</strong></td><td>福岡・那覇</td><td>450名</td></tr>
+            </tbody>
+            <tfoot>
+                <tr style="font-weight: bold;">
+                    <td colspan="2" style="text-align: right;">合計</td>
+                    <td>5,000名</td>
+                </tr>
+            </tfoot>
+        </table>
+        <p class="caption">※ 南日本管区（那覇拠点）は離島事案に特化した少数精鋭構成</p>
+    </section>
 </main>
 
 <script>
