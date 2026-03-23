@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>省について | 特別事案調査省 - MSCI</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Hiragino Mincho ProN", "MS Mincho", serif;
+      background: #f4f7f9;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    .content-container {
+      max-width: 900px;
+      margin: 120px auto 60px;
+      padding: 0 48px 60px;
+      background: white;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    }
+
+    .page-header {
+      padding: 40px 0 20px;
+      border-bottom: 3px solid #002040;
+      margin-bottom: 40px;
+    }
+
+    .page-header h2 {
+      font-size: 2rem;
+      color: #002040;
+      margin: 0;
+      letter-spacing: 0.1em;
+    }
+
+    .section-title {
+      color: #002040;
+      font-size: 1.4rem;
+      margin-top: 50px;
+      margin-bottom: 15px;
+      border-left: 5px solid #002040;
+      padding-left: 15px;
+    }
+
+    .data-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.9rem; }
+    .data-table th, .data-table td { border: 1px solid #ddd; padding: 15px; text-align: left; }
+    
+    .data-table th {
+        background-color: #f8f9fa;
+        color: #555;
+        width: 25%;
+    }
+
+    .philosophy-box {
+      background: #f0f4f8;
+      padding: 30px;
+      text-align: center;
+      margin: 30px 0;
+      border-radius: 4px;
+    }
+
+    .philosophy-text {
+      font-size: 1.5rem;
+      color: #002040;
+      font-weight: bold;
+      letter-spacing: 0.2em;
+    }
+
+    footer { background: #002040; color: #fff; text-align: center; padding: 30px; font-size: 12px; }
+  </style>
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <main class="content-container">
+    <div class="page-header">
+      <h2>省について</h2>
+    </div>
+
+    <section>
+        <p>特別事案調査省（Ministry of Special Case Investigation: MSCI）は、既存の行政機構では対応が困難な「特別事案」の調査、分析、及び事態の収束を目的として設立された国家行政機関です。</p>
+        
+        <div class="philosophy-box">
+            <p style="font-size: 0.9rem; margin-bottom: 10px; color: #666;">基本理念</p>
+            <span class="philosophy-text">国の礎、未来の灯。</span>
+        </div>
+    </section>
+
+    <section>
+        <h3 class="section-title">設立の経緯</h3>
+        <p style="font-size: 0.95rem;">
+            近年の急速な技術革新と社会構造の変化に伴い、従来の警察、自衛隊、及び各省庁の管轄を越える「複合的事象」が増加。これらに対し、縦割り行政を排し、高度な情報集積と直接的な執行権限を一元化するため、令和8年に設置されました。
+        </p>
+    </section>
+
+    <section>
+        <h3 class="section-title">省の概要</h3>
+        <table class="data-table">
+            <tr>
+                <th>名称</th>
+                <td>特別事案調査省（略称：MSCI）</td>
+            </tr>
+            <tr>
+                <th>所在地</th>
+                <td>東京都千代田区霞が関（本省）</td>
+            </tr>
+            <tr>
+                <th>設立</th>
+                <td>令和8年（2026年）</td>
+            </tr>
+            <tr>
+                <th>定員</th>
+                <td>約5,500名（機動捜査庁を含む）</td>
+            </tr>
+            <tr>
+                <th>所管事務</th>
+                <td>特別事案の監視、情報分析、法的処置の策定、及び強制執行。</td>
+            </tr>
+        </table>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 Ministry of Special Case Investigation. All Rights Reserved.
+  </footer>
+
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+  </script>
+
+</body>
+</html>
