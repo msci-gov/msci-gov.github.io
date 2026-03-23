@@ -1,69 +1,128 @@
-<main class="container page-content">
-    <section class="authority-header">
-        <span class="agency-tag">国家行政組織法 第3条に基づく省</span>
-        <h1>組織構造</h1>
-        <hr class="accent-line">
-    </section>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>組織案内 | 特別事案調査省</title>
+    <style>
+        /* 共通スタイル（index.htmlと合わせる） */
+        body, html {
+            margin: 0; padding: 0;
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", sans-serif;
+            background-color: #f4f7f9; color: #333; line-height: 1.6;
+        }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 30px; }
 
-    <section class="msci-core-section">
-        <div class="section-title">
-            <span>CORE ORGANIZATION</span>
-            <h2>特別事案調査省 本省</h2>
-        </div>
-        <div class="core-grid">
-            <div class="core-info">
-                <p>本省は霞が関に拠点を置き、国家の存立を揺るがす「事象」の早期発見、及び法的処理の策定を主務とする。高度な情報集積能力を背景に、各省庁間の調整を排した直接指揮権を有する。</p>
+        /* トップバー */
+        .msci-header {
+            background-color: #002040; color: white; padding: 12px 0;
+            position: fixed; width: 100%; top: 0; z-index: 1000;
+        }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; }
+        .site-branding { font-weight: bold; font-size: 1.1rem; }
+        .site-branding span { font-size: 0.7rem; color: #a0b0c0; margin-left: 8px; }
+        .global-nav ul { display: flex; list-style: none; margin: 0; padding: 0; gap: 20px; }
+        .global-nav a { text-decoration: none; color: white; font-size: 0.85rem; }
+
+        /* コンテンツエリア */
+        .page-content { padding-top: 100px; padding-bottom: 80px; }
+        
+        .authority-header { margin-bottom: 40px; }
+        .agency-tag { background: #ce0000; color: white; padding: 2px 8px; font-size: 0.75rem; font-weight: bold; }
+        h1 { color: #002040; font-size: 2rem; margin: 10px 0; }
+        .accent-line { border: none; border-top: 3px solid #002040; width: 50px; margin: 0; }
+
+        /* 本省セクション */
+        .section-box { background: white; border: 1px solid #e0e6ed; padding: 30px; margin-bottom: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .section-label { font-size: 0.75rem; color: #888; letter-spacing: 0.1em; display: block; margin-bottom: 5px; }
+        h2 { color: #002040; font-size: 1.5rem; margin-top: 0; border-left: 5px solid #002040; padding-left: 15px; }
+
+        .core-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px; }
+        .unit h3 { font-size: 1rem; color: #003366; margin-bottom: 5px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        .unit p { font-size: 0.85rem; color: #666; margin: 0 0 15px 0; }
+
+        /* 指揮系統の線 */
+        .connector { text-align: center; color: #bbb; font-size: 0.8rem; margin: 20px 0; position: relative; }
+        .connector::before { content: '▼'; }
+
+        /* MIAセクション */
+        .mia-stats { background: #002040; color: white; display: flex; justify-content: space-around; padding: 15px; margin: 20px 0; border-radius: 4px; }
+        .stat-item { text-align: center; }
+        .stat-label { font-size: 0.7rem; opacity: 0.7; display: block; }
+        .stat-value { font-size: 1.2rem; font-weight: bold; }
+
+        .deployment-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+        .deployment-table th, .deployment-table td { border: 1px solid #eee; padding: 10px; text-align: left; }
+        .deployment-table th { background: #f8f9fa; color: #666; }
+    </style>
+</head>
+<body>
+
+    <header class="msci-header">
+        <div class="container header-inner">
+            <div class="site-branding">
+                特別事案調査省 <span>MSCI</span>
             </div>
-            <div class="internal-units">
+            <nav class="global-nav">
+                <ul>
+                    <li><a href="index.html">トップ</a></li>
+                    <li><a href="organization.html">組織案内</a></li>
+                    <li><a href="#">報道発表</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container page-content">
+        <section class="authority-header">
+            <span class="agency-tag">国家行政組織法 第3条</span>
+            <h1>組織構造・配備状況</h1>
+            <hr class="accent-line">
+        </section>
+
+        <section class="section-box">
+            <span class="section-label">CORE ORGANIZATION</span>
+            <h2>特別事案調査省 本省</h2>
+            <div class="core-grid">
                 <div class="unit">
                     <h3>情報分析局</h3>
-                    <p>国内外の通信・非公開情報を24時間監視し、事案の兆候を数理モデルで予測。MIAの行動指針を決定する。</p>
+                    <p>国内外のあらゆる通信データを集積。事案の予測・検知を行う中枢部門。</p>
+                    <h3>事案策定室</h3>
+                    <p>検知された事案に対し、MIAへの執行命令及び処理手順を策定する。</p>
                 </div>
                 <div class="unit">
                     <h3>法務執行室</h3>
-                    <p>「特別執行権」の法的根拠を担保し、事案処理における司法手続きの迅速化（または特例除外）を統括する。</p>
-                </div>
-                <div class="unit">
+                    <p>事案処理における特別執行権の法的正当性を確保し、司法との調整を行う。</p>
                     <h3>戦略開発部</h3>
-                    <p>対事案用特殊装備、及び高度AIを用いた事案収束シミュレーションの開発を行う。</p>
+                    <p>対事案用AI及び特殊装備の設計・運用を担う技術集団。</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <div class="vertical-connector">指揮命令系統</div>
-
-    <section class="deployment-section">
-        <div class="section-title">
-            <span>EXECUTIVE ARM</span>
-            <h2>機動捜査庁（MIA）</h2>
-        </div>
         </section>
-</main>
 
-<style>
-    /* 本省用の追加スタイル */
-    .section-title { margin-bottom: 30px; }
-    .section-title span { font-size: 0.8rem; color: #888; letter-spacing: 0.2em; font-weight: bold; }
-    .section-title h2 { color: #002040; margin: 5px 0; font-size: 1.8rem; }
+        <div class="connector">指揮命令系統</div>
 
-    .msci-core-section { padding: 40px; background: #fff; border: 1px solid #e0e6ed; margin-bottom: 20px; }
-    .core-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; }
-    .core-info p { line-height: 1.8; color: #444; font-size: 0.95rem; }
+        <section class="section-box">
+            <span class="section-label">EXECUTIVE ARM</span>
+            <h2>機動捜査庁 (MIA)</h2>
+            <div class="mia-stats">
+                <div class="stat-item"><span class="stat-label">総員</span><span class="stat-value">5,000名</span></div>
+                <div class="stat-item"><span class="stat-label">機動連隊</span><span class="stat-value">12個大隊</span></div>
+                <div class="stat-item"><span class="stat-label">即応拠点</span><span class="stat-value">47箇所</span></div>
+            </div>
+            <table class="deployment-table">
+                <thead>
+                    <tr><th>管区</th><th>主要拠点</th><th>定員</th><th>特記事項</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>東日本管区</td><td>東京(立川)</td><td>1,800</td><td>SART(特殊班)常駐</td></tr>
+                    <tr><td>西日本管区</td><td>大阪・広島</td><td>1,200</td><td>重要拠点防衛</td></tr>
+                    <tr><td>北日本管区</td><td>札幌・仙台</td><td>800</td><td>広域展開対応</td></tr>
+                    <tr><td>中日本管区</td><td>名古屋</td><td>700</td><td>連絡調整拠点</td></tr>
+                    <tr><td>南日本管区</td><td>福岡・那覇</td><td>500</td><td>国境・離島事案</td></tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
 
-    .internal-units { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    .unit { border-bottom: 1px solid #eee; padding-bottom: 15px; }
-    .unit h3 { font-size: 1rem; color: #003366; margin-bottom: 8px; }
-    .unit p { font-size: 0.85rem; color: #666; margin: 0; }
-
-    /* 上下を繋ぐコネクター */
-    .vertical-connector {
-        text-align: center; font-size: 0.8rem; color: #999;
-        padding: 20px 0; position: relative;
-    }
-    .vertical-connector::before, .vertical-connector::after {
-        content: ''; position: absolute; left: 50%; height: 20px; width: 1px; background: #ccc;
-    }
-    .vertical-connector::before { top: 0; }
-    .vertical-connector::after { bottom: 0; }
-</style>
+</body>
+</html>
