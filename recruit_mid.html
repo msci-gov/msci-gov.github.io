@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>経験者採用 | 特別事案調査省 - MSCI</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Hiragino Mincho ProN", "MS Mincho", serif;
+      background: #f4f7f9;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    .recruit-container {
+      max-width: 1000px;
+      margin: 120px auto 60px;
+      padding: 0 48px 60px;
+      background: white;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    }
+
+    .page-header {
+      padding: 40px 0 20px;
+      border-bottom: 3px solid #002040;
+      margin-bottom: 40px;
+    }
+
+    .page-header h2 {
+      font-size: 1.8rem;
+      color: #002040;
+      margin: 0;
+    }
+
+    /* テーブルデザインの統一 */
+    .data-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.9rem; }
+    .data-table th, .data-table td { border: 1px solid #ddd; padding: 15px; text-align: left; }
+    
+    /* 見出しの視認性 */
+    .data-table thead th {
+        background-color: #e0e6ed; 
+        color: #002040; 
+        font-weight: bold;
+        border-bottom: 2px solid #ccc;
+    }
+
+    .data-table th.side-label {
+        background-color: #f8f9fa;
+        width: 25%;
+        color: #555;
+    }
+
+    .job-name { font-weight: bold; font-size: 1.1rem; color: #002040; }
+
+    .mid-notice {
+        background: #fdf2f2; border: 1px solid #deb8b8; padding: 20px; margin-top: 30px; 
+        font-size: 0.85rem; color: #333;
+    }
+
+    footer { background: #002040; color: #fff; text-align: center; padding: 30px; font-size: 12px; }
+  </style>
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <main class="recruit-container">
+    <div class="page-header">
+      <h2>令和8年度 経験者（中途）採用募集要項</h2>
+    </div>
+
+    <section>
+        <h3 style="color: #002040;">重点募集領域</h3>
+        <p style="font-size: 0.9rem;">現在、当省では特定の専門スキルを持つ民間人材、及び他官公庁での実務経験者を以下の職種で募集しています。</p>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th style="width: 30%;">職種</th>
+                    <th style="width: 45%;">想定される経歴</th>
+                    <th style="width: 25%;">採用予定数</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="job-name">事案分析スペシャリスト</span></td>
+                    <td>データサイエンス、金融市場分析、または地政学リスク調査の実務経験（約5年以上）。</td>
+                    <td>約5名</td>
+                </tr>
+                <tr>
+                    <td><span class="job-name">機動捜査庁 指揮官候補</span></td>
+                    <td>警察、自衛隊、またはそれに準ずる実働組織における部隊運用・指揮経験。</td>
+                    <td>約10名</td>
+                </tr>
+                <tr>
+                    <td><span class="job-name">サイバーセキュリティ技官</span></td>
+                    <td>インシデント対応、マルウェア解析、または高度なシステム開発実務経験。</td>
+                    <td>約8名</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h3 style="color: #002040; margin-top: 50px;">待遇・条件</h3>
+        <table class="data-table">
+            <tr>
+                <th class="side-label">給与</th>
+                <td>前職の経歴・能力を考慮の上、本省令に基づき決定。別途、特殊技能手当を支給。</td>
+            </tr>
+            <tr>
+                <th class="side-label">勤務地</th>
+                <td>本省（霞が関）または機動捜査庁各本部。全国転勤の可能性あり。</td>
+            </tr>
+            <tr>
+                <th class="side-label">応募要件</th>
+                <td>原則として、民間企業または官公庁において約5年以上の専門的な実務経験を有すること。</td>
+            </tr>
+        </table>
+    </section>
+
+    <div class="mid-notice">
+        <strong>【中途採用者の皆様へ】</strong><br>
+        当省の業務は高度な機密性を要するため、採用選考の過程で厳格なバックグラウンド調査（適格性評価）を実施いたします。あらかじめご了承の上、ご応募ください。
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2026 Ministry of Special Case Investigation. All Rights Reserved.
+  </footer>
+
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+  </script>
+
+</body>
+</html>
