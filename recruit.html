@@ -1,101 +1,195 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <title>採用情報 | 特別事案調査省 - MSCI</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* 共通：画像なしの硬派なレイアウト */
-        .content-container { padding-top: 100px; padding-bottom: 60px; max-width: 900px; margin: 0 auto; }
-        .section-title { color: #002040; border-bottom: 2px solid #002040; padding-bottom: 10px; margin-top: 40px; }
-        
-        .data-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.9rem; }
-        .data-table th, .data-table td { border: 1px solid #ddd; padding: 15px; text-align: left; }
-        
-        /* 見出しの視認性強化 */
-        .data-table thead th {
-            background-color: #e0e6ed; 
-            color: #002040; 
-            font-weight: bold;
-            border-bottom: 2px solid #ccc;
-        }
-        
-        .data-table td { background: #fff; line-height: 1.6; }
-        .job-title { font-weight: bold; color: #002040; font-size: 1rem; }
-        
-        .alert-box { 
-            background: #fdf2f2; border: 1px solid #deb8b8; padding: 20px; 
-            margin-top: 30px; font-size: 0.85rem; color: #333; 
-        }
-        .caption { font-size: 0.8rem; color: #777; margin-top: 5px; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>採用情報 | 特別事案調査省 - MSCI</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      /* 国家機関の重みを出すため、明朝体をベースに設定 */
+      font-family: "Hiragino Mincho ProN", "MS Mincho", serif;
+      background: #f4f7f9;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    /* 共通ヘッダーとの余白 */
+    .recruit-container {
+      max-width: 1000px;
+      margin: 120px auto 60px; /* 上部120pxあけてヘッダーと被らないように */
+      padding: 0 48px 60px;
+      background: white;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    }
+
+    .page-header {
+      padding: 40px 0 20px;
+      border-bottom: 3px solid #002040; /* MSCIネイビー */
+      margin-bottom: 40px;
+    }
+
+    .page-header h2 {
+      font-size: 2rem;
+      color: #002040;
+      margin: 0;
+      letter-spacing: 0.1em;
+    }
+
+    .intro-text {
+      font-size: 1.1rem;
+      text-align: center;
+      margin-bottom: 50px;
+      color: #222;
+    }
+
+    /* 新卒・中途の選択エリア */
+    .recruit-selection {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+
+    .selection-card {
+      flex: 1;
+      border: 1px solid #ddd;
+      padding: 40px 20px;
+      text-align: center;
+      transition: 0.3s;
+      background: #fff;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .selection-card:hover {
+      border-color: #002040;
+      background: #f0f4f8;
+      transform: translateY(-5px);
+    }
+
+    .selection-card h4 {
+      font-size: 24px;
+      margin: 0 0 15px 0;
+      color: #002040;
+    }
+
+    .selection-card p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 25px;
+    }
+
+    .btn-arrow {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      background: #002040;
+      color: white;
+      border-radius: 50%;
+      font-size: 20px;
+    }
+
+    /* インフォメーション */
+    .info-box {
+      background: #f9f9f9;
+      padding: 30px;
+      border: 1px solid #eee;
+    }
+
+    .info-box h5 {
+      margin-top: 0;
+      font-size: 18px;
+      border-left: 4px solid #002040;
+      padding-left: 10px;
+      color: #002040;
+      font-family: sans-serif; /* 見出しはサンセリフで視認性アップ */
+    }
+
+    .info-list {
+      list-style: none;
+      padding: 0;
+      font-size: 14px;
+    }
+
+    .info-list li {
+      margin-bottom: 10px;
+    }
+
+    .info-list a {
+      color: #002040;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .info-list a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background: #002040;
+      color: #fff;
+      text-align: center;
+      padding: 30px;
+      font-size: 12px;
+      font-family: sans-serif;
+    }
+  </style>
 </head>
 <body>
 
-<div id="header-placeholder"></div>
+  <div id="header-placeholder"></div>
 
-<main class="content-container">
-    <h1>採用情報</h1>
-    <p>特別事案調査省（MSCI）及び機動捜査庁（MIA）では、国家の平穏を維持する強い使命感を持った人材を求めています。</p>
-
-    <section>
-        <h2 class="section-title">募集職種一覧</h2>
-        <table class="data-table">
-            <thead>
-                <tr>
-                    <th style="width: 25%;">職種</th>
-                    <th style="width: 50%;">業務内容</th>
-                    <th style="width: 25%;">採用予定数</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><span class="job-title">特別調査官</span><br>(本省勤務)</td>
-                    <td>事案の高度分析、予測モデルの構築、及び法的処理の策定。各省庁との政策調整。</td>
-                    <td>約15名</td>
-                </tr>
-                <tr>
-                    <td><span class="job-title">機動捜査官</span><br>(MIA各管区)</td>
-                    <td>事案現場における強制執行、対象の抑制・排除、広域捜査の実施。</td>
-                    <td>約120名</td>
-                </tr>
-                <tr>
-                    <td><span class="job-title">技術開発職員</span><br>(本省・研究所)</td>
-                    <td>対事案特殊装備の設計、高度AI「IZANAGI」の保守、サイバー防衛。</td>
-                    <td>約20名</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-
-    <section>
-        <h2 class="section-title">選考区分</h2>
-        <table class="data-table">
-            <tr>
-                <th style="background: #f4f7f9; width: 25%;">応募資格</th>
-                <td>国家公務員採用総合職試験（大卒程度・院卒者試験）合格者、または同等の能力を有する実務経験者。</td>
-            </tr>
-            <tr>
-                <th style="background: #f4f7f9;">選考プロセス</th>
-                <td>1.書類審査 / 2.適性検査（心理・適応能力） / 3.個別面接（複数回） / 4.身体検査（MIA志望者のみ）</td>
-            </tr>
-        </table>
-    </section>
-
-    <div class="alert-box">
-        <strong>【重要事項】</strong><br>
-        本省及び機動捜査庁の業務内容には、一部機密保持が必要な事項が含まれます。
-        内定者には、国家公務員法に基づく守秘義務の遵守に加え、当省独自の機密保持契約の締結を求めます。
+  <main class="recruit-container">
+    <div class="page-header">
+      <h2>採用情報</h2>
     </div>
-</main>
 
-<script>
+    <div class="intro-text">
+      <p>「国の礎、未来の灯。」<br>
+      特別事案調査省は、国家の安全を背負う志ある人材を求めています。</p>
+    </div>
+
+    <div class="recruit-selection">
+      <a href="#" class="selection-card">
+        <h4>新卒採用</h4>
+        <p>大学・大学院を<br>卒業見込みの方はこちら</p>
+        <div class="btn-arrow">→</div>
+      </a>
+
+      <a href="#" class="selection-card">
+        <h4>経験者採用</h4>
+        <p>民間企業、他官公庁での<br>実務経験をお持ちの方はこちら</p>
+        <div class="btn-arrow">→</div>
+      </a>
+    </div>
+
+    <div class="info-box">
+      <h5>組織を知る</h5>
+      <p style="font-size: 14px; color: #555;">
+        当省の業務は多岐にわたります。事案の分析・策定を担う本省、全国で実働を担う機動捜査庁など、
+        あなたの能力を最大限に発揮できるフィールドを用意しています。
+      </p>
+      <ul class="info-list">
+        <li><a href="organization.html">▷ 組織図・配備状況を見る</a></li>
+        <li><a href="policy.html">▷ 政策・取り組みを見る</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2026 Ministry of Special Case Investigation. All Rights Reserved.
+  </footer>
+
+  <script>
     fetch('header.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('header-placeholder').innerHTML = data;
-        });
-</script>
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+  </script>
 
 </body>
 </html>
