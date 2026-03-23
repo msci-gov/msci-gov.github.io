@@ -1,71 +1,89 @@
-<main class="main-content">
-    <div class="container">
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>組織案内 | 特別事案調査省 - MSCI</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ページ専用：画像なしの硬派なレイアウト */
+        .content-container { padding-top: 100px; padding-bottom: 60px; max-width: 900px; margin: 0 auto; }
+        .section-title { color: #002040; border-bottom: 2px solid #002040; padding-bottom: 10px; margin-top: 40px; }
         
-        <h1 class="page-title">組織案内・配備状況</h1>
-        <hr class="title-accent">
+        .data-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.9rem; }
+        .data-table th, .data-table td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        
+        /* 本省用（縦見出し） */
+        .msci-base-table th { background: #f4f7f9; color: #555; width: 30%; }
+        
+        /* MIA用（横見出し・修正箇所） */
+        .mia-table thead th {
+            /* 修正点1：見出しの背景色を少し濃く、文字を太くして視認性アップ */
+            background-color: #e0e6ed; 
+            color: #002040; /* 文字色を濃い紺に */
+            font-weight: bold; /* 太字 */
+            border-bottom: 2px solid #ccc; /* 下線を少し強調 */
+            padding: 15px 12px; /* 少し余白を広げる */
+        }
+        
+        .data-table td { background: #fff; }
+        .caption { font-size: 0.8rem; color: #777; margin-top: 5px; }
+    </style>
+</head>
+<body>
 
-        <section class="org-section">
-            <h2 class="section-heading">特別事案調査省 本省</h2>
-            <p class="section-lead">本省は霞が関に拠点を置き、情報の集積・分析、及び事案への対処方針策定を担う。</p>
-            
-            <table class="msci-table msci-base-table">
-                <tbody>
-                    <tr><th>情報分析局</th><td>国内外の通信・非公開データの集積、事案予測モデルの運用</td></tr>
-                    <tr><th>事案策定室</th><td>検知事案への対処方針策定、MIAへの執行命令発行</td></tr>
-                    <tr><th>法務執行室</th><td>特別執行権の法的担保、司法調整、事案の法的抹消処理</td></tr>
-                    <tr><th>戦略開発部</th><td>対事案特殊装備の設計、高度AI「IZANAGI」の保守管理</td></tr>
-                    <tr><th>総務課</th><td>予算管理、人事（特別調査官・捜査官の選別）</td></tr>
-                </tbody>
-            </table>
-        </section>
+<div id="header-placeholder"></div>
 
-        <section class="org-section mia-section">
-            <h2 class="section-heading">機動捜査庁 (MIA)</h2>
-            <p class="section-lead">特別事案調査省の外局として、全国5管区に実働部隊を配備。</p>
-            
-            <table class="msci-table mia-deployment-table">
-                <thead>
-                    <tr>
-                        <th class="col-region">管区</th>
-                        <th class="col-base">主要拠点</th>
-                        <th class="col-strength">定員</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="region-name">東日本管区</td>
-                        <td>東京（立川本部）</td>
-                        <td class="strength-num">約1,800名</td>
-                    </tr>
-                    <tr>
-                        <td class="region-name">西日本管区</td>
-                        <td>大阪・広島</td>
-                        <td class="strength-num">約1,200名</td>
-                    </tr>
-                    <tr>
-                        <td class="region-name">北日本管区</td>
-                        <td>札幌・仙台</td>
-                        <td class="strength-num">約800名</td>
-                    </tr>
-                    <tr>
-                        <td class="region-name">中日本管区</td>
-                        <td>名古屋</td>
-                        <td class="strength-num">約750名</td>
-                    </tr>
-                    <tr>
-                        <td class="region-name">南日本管区</td>
-                        <td>福岡・那覇</td>
-                        <td class="strength-num">約450名</td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr class="total-row">
-                        <td colspan="2">合計</td>
-                        <td class="strength-num">約5,000名</td>
-                    </tr>
-                </tfoot>
-            </table>
-        </section>
+<main class="content-container">
+    <h1>組織構造・配備状況</h1>
 
-    </div>
+    <section>
+        <h2 class="section-title">特別事案調査省 本省</h2>
+        <table class="data-table msci-base-table">
+            <tr><th>情報分析局</th><td>国内外の通信・非公開データの集積、事案予測モデルの運用</td></tr>
+            <tr><th>事案策定室</th><td>検知事案への対処方針策定、MIAへの執行命令発行</td></tr>
+            <tr><th>法務執行室</th><td>特別執行権の法的担保、司法調整、事案の法的抹消処理</td></tr>
+            <tr><th>戦略開発部</th><td>対事案特殊装備の設計、高度AI「IZANAGI」の保守管理</td></tr>
+            <tr><th>総務課</th><td>予算管理、人事（特別調査官・捜査官の選別）</td></tr>
+        </table>
+        <p class="caption">※ 本省職員は全て国家公務員総合職より選抜</p>
+    </section>
+
+    <section>
+        <h2 class="section-title">機動捜査庁 (MIA)</h2>
+        <p>特別事案調査省の外局として、全国5管区に執行部隊を配備。</p>
+        <table class="data-table mia-table">
+            <thead>
+                <tr>
+                    <th>管区</th>
+                    <th>主要拠点</th>
+                    <th>定員</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>東日本管区</strong></td><td>東京（立川本部）</td><td>約1,800名</td></tr>
+                <tr><td><strong>西日本管区</strong></td><td>大阪・広島</td><td>約1,200名</td></tr>
+                <tr><td><strong>北日本管区</strong></td><td>札幌・仙台</td><td>約800名</td></tr>
+                <tr><td><strong>中日本管区</strong></td><td>名古屋</td><td>約750名</td></tr>
+                <tr><td><strong>南日本管区</strong></td><td>福岡・那覇</td><td>約450名</td></tr>
+            </tbody>
+            <tfoot>
+                <tr style="font-weight: bold; background: #f9f9f9;">
+                    <td colspan="2" style="text-align: right;">合計</td>
+                    <td>約5,000名</td>
+                </tr>
+            </tfoot>
+        </table>
+        <p class="caption">※ 南日本管区（那覇拠点）は離島事案に特化した少数精鋭構成</p>
+    </section>
 </main>
+
+<script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
+</script>
+
+</body>
+</html>
