@@ -8,17 +8,15 @@
   <style>
     body {
       margin: 0;
-      /* 国家機関の重みを出すため、明朝体をベースに設定 */
       font-family: "Hiragino Mincho ProN", "MS Mincho", serif;
       background: #f4f7f9;
       line-height: 1.8;
       color: #333;
     }
 
-    /* 共通ヘッダーとの余白 */
     .recruit-container {
       max-width: 1000px;
-      margin: 120px auto 60px; /* 上部120pxあけてヘッダーと被らないように */
+      margin: 120px auto 60px;
       padding: 0 48px 60px;
       background: white;
       box-shadow: 0 0 20px rgba(0,0,0,0.05);
@@ -26,7 +24,7 @@
 
     .page-header {
       padding: 40px 0 20px;
-      border-bottom: 3px solid #002040; /* MSCIネイビー */
+      border-bottom: 3px solid #002040;
       margin-bottom: 40px;
     }
 
@@ -44,7 +42,7 @@
       color: #222;
     }
 
-    /* 新卒・中途の選択エリア */
+    /* 選択エリア */
     .recruit-selection {
       display: flex;
       gap: 30px;
@@ -59,8 +57,9 @@
       transition: 0.3s;
       background: #fff;
       cursor: pointer;
-      text-decoration: none;
+      text-decoration: none; /* 下線を消す */
       color: inherit;
+      display: block; /* 領域全体をクリック可能に */
     }
 
     .selection-card:hover {
@@ -105,37 +104,14 @@
       border-left: 4px solid #002040;
       padding-left: 10px;
       color: #002040;
-      font-family: sans-serif; /* 見出しはサンセリフで視認性アップ */
     }
 
-    .info-list {
-      list-style: none;
-      padding: 0;
-      font-size: 14px;
-    }
+    .info-list { list-style: none; padding: 0; font-size: 14px; }
+    .info-list li { margin-bottom: 10px; }
+    .info-list a { color: #002040; text-decoration: none; font-weight: bold; }
+    .info-list a:hover { text-decoration: underline; }
 
-    .info-list li {
-      margin-bottom: 10px;
-    }
-
-    .info-list a {
-      color: #002040;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .info-list a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      background: #002040;
-      color: #fff;
-      text-align: center;
-      padding: 30px;
-      font-size: 12px;
-      font-family: sans-serif;
-    }
+    footer { background: #002040; color: #fff; text-align: center; padding: 30px; font-size: 12px; }
   </style>
 </head>
 <body>
@@ -149,17 +125,17 @@
 
     <div class="intro-text">
       <p>「国の礎、未来の灯。」<br>
-      特別事案調査省は、国家の安全を背負う志ある人材を求めています。</p>
+      特別事案調査省は、国家の安寧を背負う志ある人材を求めています。</p>
     </div>
 
     <div class="recruit-selection">
-      <a href="#" class="selection-card">
+      <a href="recruit_new.html" class="selection-card">
         <h4>新卒採用</h4>
         <p>大学・大学院を<br>卒業見込みの方はこちら</p>
         <div class="btn-arrow">→</div>
       </a>
 
-      <a href="#" class="selection-card">
+      <a href="recruit_mid.html" class="selection-card">
         <h4>経験者採用</h4>
         <p>民間企業、他官公庁での<br>実務経験をお持ちの方はこちら</p>
         <div class="btn-arrow">→</div>
