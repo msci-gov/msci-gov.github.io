@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>採用情報 | 特別事案調査省 - MSCI</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 共通：画像なしの硬派なレイアウト */
+        .content-container { padding-top: 100px; padding-bottom: 60px; max-width: 900px; margin: 0 auto; }
+        .section-title { color: #002040; border-bottom: 2px solid #002040; padding-bottom: 10px; margin-top: 40px; }
+        
+        .data-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.9rem; }
+        .data-table th, .data-table td { border: 1px solid #ddd; padding: 15px; text-align: left; }
+        
+        /* 見出しの視認性強化 */
+        .data-table thead th {
+            background-color: #e0e6ed; 
+            color: #002040; 
+            font-weight: bold;
+            border-bottom: 2px solid #ccc;
+        }
+        
+        .data-table td { background: #fff; line-height: 1.6; }
+        .job-title { font-weight: bold; color: #002040; font-size: 1rem; }
+        
+        .alert-box { 
+            background: #fdf2f2; border: 1px solid #deb8b8; padding: 20px; 
+            margin-top: 30px; font-size: 0.85rem; color: #333; 
+        }
+        .caption { font-size: 0.8rem; color: #777; margin-top: 5px; }
+    </style>
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<main class="content-container">
+    <h1>採用情報</h1>
+    <p>特別事案調査省（MSCI）及び機動捜査庁（MIA）では、国家の平穏を維持する強い使命感を持った人材を求めています。</p>
+
+    <section>
+        <h2 class="section-title">募集職種一覧</h2>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th style="width: 25%;">職種</th>
+                    <th style="width: 50%;">業務内容</th>
+                    <th style="width: 25%;">採用予定数</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="job-title">特別調査官</span><br>(本省勤務)</td>
+                    <td>事案の高度分析、予測モデルの構築、及び法的処理の策定。各省庁との政策調整。</td>
+                    <td>約15名</td>
+                </tr>
+                <tr>
+                    <td><span class="job-title">機動捜査官</span><br>(MIA各管区)</td>
+                    <td>事案現場における強制執行、対象の抑制・排除、広域捜査の実施。</td>
+                    <td>約120名</td>
+                </tr>
+                <tr>
+                    <td><span class="job-title">技術開発職員</span><br>(本省・研究所)</td>
+                    <td>対事案特殊装備の設計、高度AI「IZANAGI」の保守、サイバー防衛。</td>
+                    <td>約20名</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2 class="section-title">選考区分</h2>
+        <table class="data-table">
+            <tr>
+                <th style="background: #f4f7f9; width: 25%;">応募資格</th>
+                <td>国家公務員採用総合職試験（大卒程度・院卒者試験）合格者、または同等の能力を有する実務経験者。</td>
+            </tr>
+            <tr>
+                <th style="background: #f4f7f9;">選考プロセス</th>
+                <td>1.書類審査 / 2.適性検査（心理・適応能力） / 3.個別面接（複数回） / 4.身体検査（MIA志望者のみ）</td>
+            </tr>
+        </table>
+    </section>
+
+    <div class="alert-box">
+        <strong>【重要事項】</strong><br>
+        本省及び機動捜査庁の業務内容には、一部機密保持が必要な事項が含まれます。
+        内定者には、国家公務員法に基づく守秘義務の遵守に加え、当省独自の機密保持契約の締結を求めます。
+    </div>
+</main>
+
+<script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
+</script>
+
+</body>
+</html>
